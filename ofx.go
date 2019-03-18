@@ -86,7 +86,7 @@ type Ofx struct {
 func (o Ofx) String() string {
 	var buf bytes.Buffer
 
-	buf.WriteString(fmt.Sprintf("Account Type: %s\nBank Code: %s\nBranch Code: %s\nAccount Number: %s\n", o.Type, o.BankCode, o.BranchCode, o.AccountNumber))
+	buf.WriteString(fmt.Sprintf("Account Type: %d\nBank Code: %s\nBranch Code: %s\nAccount Number: %s\n", o.Type, o.BankCode, o.BranchCode, o.AccountNumber))
 
 	for _, t := range o.Transactions {
 		buf.WriteString(fmt.Sprintf("%s\n", t))
